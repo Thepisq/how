@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${article.title}"></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{../css/minor.css}">
+    <link rel="stylesheet" th:href="@{../bootstrap-3.3.7-dist/css/bootstrap.min.css}">
+    <script type="text/javascript" th:src="@{../js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{../bootstrap-3.3.7-dist/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+<div id="top">
+    <div id="top_one"><a href="/"><img th:src="@{../images/logo.png}" width="200px" height="100px"></a></div>
+    <div id="top_two"><a href="major.html">首页&nbsp;&nbsp;&nbsp;</a>
+        <a href="#">话题广场&nbsp;&nbsp;&nbsp;</a>
+        <a href="#">浏览发现&nbsp;&nbsp;&nbsp;</a></div>
+    <div id="top_three">
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="书籍 电影 游戏 音乐...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">🔍</button>
+      </span>
+            </div>
+        </form>
+    </div>
+</div>
+    <div id="main">
+        <h2 style="margin-left: 200px;padding-top: 30px; float: left;" th:text="${article.title}"></h2>
+
+        <div style="clear: both;"></div>
+        <!--清除浮动-->
+        <div id="text">
+            <br>
+            <br>
+
+            <p><a href="#" th:text="${article.userID}"></a>
+
+                <br>
+                <br>
+
+            <p id="context" th:text="${article.context}"></p>
+            <br>
+            <br>
+            </p>
+            <br>
+            <br>
+            <img class="zan" th:src="@{../images/logo.png}" width="150px">
+        </div>
+
+        <div id="hot_topic">
+            <h4 class="hot_text">热门话题</h4>
+
+            <div style="clear: both;"></div>
+            <!--清除浮动-->
+            <ul>
+                <li>
+                    <a href="#">你收到过的最特别的一封信</a>
+                </li>
+                <li>
+                    <a href="#">当年高考，你和什么失之交臂</a>
+                </li>
+                <li>
+                    <a href="#">如何评价微软收购GitHub</a>
+                </li>
+                <li>
+                    <a href="#">如果生命只剩最后一天，你会做什么</a>
+                </li>
+                <li>
+                    <a href="#">给高中刚毕业的弟弟妹妹们写一封信</a>
+                </li>
+                <li>
+                    <a href="#">我来试试2018高考作文题</a>
+                </li>
+                <li>
+                    <a href="#"><img alt="" th:src="@{../images/guanggao2.jpg}" width="300px"></a>
+                </li>
+            </ul>
+        </div>
+        <div style="clear: both;"></div>
+        <!--清除浮动-->
+        <br>
+        <br>
+        <span style="margin-left: 200px">回帖</span>
+        <br>
+        <br>
+        <hr>
+        <div id="echo_content"></div>
+        <div id="echo">
+            <br>
+            <span style="color: green;margin-left: 200px">你的回应......</span>
+
+            <form style="margin-left: 200px">
+                <textarea rows="6" cols="110" style="resize: none"></textarea>
+                <br>
+                <input type="submit" value="顶贴" style="margin-left: 690px">
+            </form>
+            <br>
+            <br>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var ctxA = $("#context").html();
+//        var ctxB = ctxA.replace(/%/g, '%25');
+            console.log("A:" + ctxA);
+            $("#context").text("");
+            $("#context").append(decodeURIComponent(ctxA));
+        });
+    </script>
+</body>
+</html>

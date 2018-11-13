@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>光粒</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" type="text/css" th:href="@{../css/major.css}">
+    <!-- bootstrap -->
+    <link rel="stylesheet" th:href="@{../bootstrap-3.3.7-dist/css/bootstrap.min.css}" >
+    <script type="text/javascript" th:src="@{../js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{../bootstrap-3.3.7-dist/js/bootstrap.min.js}" ></script>
+  </head>
+  
+  <body>
+  <div id="box">
+  <div id="top">
+  	<div id="top_one"><a href="/"><img th:src="@{../images/logo.png}" width="200px" height="100px"></a></div>
+  	<div id="top_two"><from>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="书籍 电影 游戏 音乐...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">!</button>
+      </span>
+    </div></from>
+    	</div>
+    	<div id="top_three"><a href="#">书籍&nbsp;&nbsp;&nbsp;</a>
+    						<a href="#">电影&nbsp;&nbsp;&nbsp;</a>
+    						<a href="#">游戏&nbsp;&nbsp;&nbsp;</a>
+    						<a href="#">音乐&nbsp;&nbsp;&nbsp;</a>
+    						<div class="btn-group" role="group">
+    <button type="button" id="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      其他
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">军事科技</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">生活娱乐</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">历史文化</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">明星时尚</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">旅游美食</a></li>
+    </ul>
+  </div>
+    	</div>
+    </div>
+    <div id="second">
+    	<div id="second_left">
+    		<div id="second_left_top"><h4>最新推荐</h4></div>
+    		<div id="second_left_down">
+    		  <div id="wrapper"><!-- 最外层部分 -->
+    		  	<div id="banner"><!-- 轮播部分 -->
+    		  	<ul class="list-unstyled" id="imgList"><!-- 图片部分 -->
+			      <li><a href="minor.html"><img th:src="@{../images/major/img1.jpg}" width="430px" height="300px" alt=""></a></li>
+			      <li><a href="#"><img th:src="@{../images/major/img2.jpg}" width="430px" height="300px" alt=""></a></li>
+			      <li><a href="#"><img th:src="@{../images/major/img3.jpg}" width="430px" height="300px" alt=""></a></li>
+			      <li><a href="#"><img th:src="@{../images/major/img4.jpg}" width="430px" height="300px" alt=""></a></li>
+			      <li><a href="#"><img th:src="@{../images/major/img5.jpg}" width="430px" height="300px" alt=""></a></li>
+	      </ul>
+			      <div class="bg"></div> <!-- 图片底部背景层部分-->
+		      <ul class="list-unstyled" id="infoList"><!-- 图片左下角文字信息部分 -->
+		        <li class="infoOn"><b>习俗？成长？人们为什么要打耳洞？</b></li>
+		        <li><b>量产甜蜜：为什么我们无法停止吃糖和长胖？</b></li>
+		        <li><b>科技究竟会成为人类的朋友还是敌人</b></li>
+		        <li><b>为什么人类混血好看，而其他动物都是纯血的好看</b></li>
+		        <li><b>谁才是第一台计算机的发明人</b></li>
+		      </ul>
+		      <ul class="list-unstyled" id="indexList"><!-- 图片右下角序号部分 -->
+		        <li class="indexOn"></li>
+		        <li></li>
+		        <li></li>
+		        <li></li>
+		        <li></li>
+		      </ul>
+    		  	</div>
+    		  </div>
+		  <script type="text/javascript" th:src="@{../js/major.js}"></script>
+    		<div id="news">
+				<ul class="list-unstyled" id="toparticle">
+				  <!--<li><a href="#" style='color:black'><h5>帮还是不帮，多想一会儿可能决定就变了</h5></a></li>-->
+				  <!--<li><a href="#" style='color:black'><h5>干细胞领域再起事端，学术造假何时能停？</h5></a></li>-->
+				  <!--<li><a href="#" style='color:black'><h5>网页排名这么麻烦的事，还是你们自己来吧</h5></a></li>-->
+				  <!--<li><a href="#" style='color:black'><h5>你看书的动力是什么？</h5></a></li>-->
+				  <!--<li><a href="#" style='color:black'><h5>时间旅行不可能？</h5></a></li>-->
+				</ul>
+			</div>
+    		</div>
+    		</div>
+    	<div id="second_right">
+    		<div id="second_right_top"><h4>热门主题</h4></div>
+    		<div id="second_right_down"><ul class="list-unstyled">
+				  <li><a href="#"><h5><b>理想中的老年生活</b></h5></a></li>
+				  <li><a href="#"><h5><b>双十一什么值得买？</b></h5></a></li>
+				  <li><a href="#"><h5><b>我的同事这么厉害我却浑然不知!</b></h5></a></li>
+				  <li><a href="#"><h5><b>网页排名这么麻烦的事，还是你们自己来吧</b></h5></a></li>
+				  <li><a href="#"><h5><b>你是怎么开始一段恋情的？</b></h5></a></li>
+				  <li><a href="#"><h5><b>如果可以重来你想为何而生？</b></h5></a></li>
+				  <li><a href="#"><h5><b>那些让你怀疑人生的时刻</b></h5></a></li>
+				  <li><a href="#"><h5><b>真正决定分手的那一刻你做了什么？</b></h5></a></li>
+				</ul></div>
+			</div>
+    	</div>
+    <div id="third">
+    	<div class="left">
+    		<div class="left_top"><h4>热点内容</h4></div>
+    		<div class="left_down">
+    		<div class="one">
+    			<div class="one_top"><b>生活.娱乐</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/life1.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>皇家自热鸡汤，颠覆传统“吃鸡”模式</b></h5></a><br>
+    			真香！</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>《中国心歌声》第三季全国城市海选开始</a></li>
+    									 <li><a href="#" style='color:black'>判断幼儿心理健康的7大标准</a></li>
+    									 <li><a href="#" style='color:black'>楼市大消息！签过已有20家银行停止房贷</a></li>
+    									 <li><a href="#" style='color:black'>天猫可“私人定制”米其林菜单</a></li>
+    									 <li><a href="#" style='color:black'>咪咕全民健身拉开序幕</a></li>
+    									 <li><a href="#" style='color:black'>上海女性甲状腺癌发病率超过乳腺癌排第一</a></li>				
+    									</ul></div>
+    		</div>
+    		<div class="two">
+    			<div class="one_top"><b>电影.游戏</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/movie1.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>甄子丹遭官方片撕，愤怒反击</b></h5></a><br>
+    			我要打十个！</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>DC电影《小丑》新添两位重量级角色</a></li>
+    									 <li><a href="#" style='color:black'>痛苦地狱开发商新作《Paranoid》公布试玩影像</a></li>
+    									 <li><a href="#" style='color:black'>Steam怪物猎人世界绚辉龙限时任务开启</a></li>
+    									 <li><a href="#" style='color:black'>电影《毒液》水墨风海报亮相</a></li>
+    									 <li><a href="#" style='color:black'>印度电影《老爸102岁》中国有望引进</a></li>
+    									 <li><a href="#" style='color:black'>《绝地求生》或将在12月登陆PS4平台</a></li>				
+    									</ul></div>
+    		</div>
+    		<div class="three">
+    			<div class="one_top"><b>文化.历史</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/history1.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>古代过年都有什么娱乐活动？</b></h5></a><br>
+    			古代娱乐活动更少，但他们懂得如何做闲人</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>《中国心歌声》第三季全国城市海选开始</a></li>
+    									 <li><a href="#" style='color:black'>判断幼儿心理健康的7大标准</a></li>
+    									 <li><a href="#" style='color:black'>楼市大消息！签过已有20家银行停止房贷</a></li>
+    									 <li><a href="#" style='color:black'>天猫可“私人定制”米其林菜单</a></li>
+    									 <li><a href="#" style='color:black'>咪咕全民健身拉开序幕</a></li>
+    									 <li><a href="#" style='color:black'>上海女性甲状腺癌发病率超过乳腺癌排第一</a></li>				
+    									</ul></div>
+    		</div>
+    		<div class="four">
+    			<div class="one_top"><b>军事.科技</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/junshi1.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>威龙利剑出鞘！我歼20战机珠海炫技机身寒光乍现</b></h5></a><br>
+    			腻害的一批！</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>VT5轻型坦克亮相珠海航展显风采</a></li>
+    									 <li><a href="#" style='color:black'>马化腾：科技赋能“新文创” 打造中国软实力</a></li>
+    									 <li><a href="#" style='color:black'>中国首曝彩虹7隐身查打无人机</a></li>
+    									 <li><a href="#" style='color:black'>“双新双创”看江苏农业科技进步贡献率达67%</a></li>
+    									 <li><a href="#" style='color:black'>中国陆基鹰击12反舰导弹首曝光</a></li>
+    									 <li><a href="#" style='color:black'>网友称锤子科技只有情怀没有创新 罗永浩回应</a></li>				
+    									</ul></div>
+    		</div>
+    		</div>
+    	</div>
+    	<div class="right"><center><img th:src="@{../images/guanggao1.jpg}" width="300px" height="200px" alt=""></center></div>
+    </div>
+        <div id="fourth">
+    	<div class="left">
+    		<div class="left_top"><h4>热门问答</h4></div>
+    		<div class="left_down">
+    		<div class="one">
+    			<div class="one_top"><b>旅游.美食</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/wenda1.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>在你记忆中，什么食物最能代表冬天的味道？</b></h5></a><br>
+    			平平淡淡才是真！</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>在你心中你理想的火锅是什么样子的？</a></li>
+    									 <li><a href="#" style='color:black'>成都有哪些值得推荐的景点或旅游路线？</a></li>
+    									 <li><a href="#" style='color:black'>有哪些你至今印象深刻的美食？</a></li>
+    									 <li><a href="#" style='color:black'>重庆有哪些冷门但值得一去的地方？</a></li>
+    									 <li><a href="#" style='color:black'>去那些地方旅游能长见识开眼界？</a></li>
+    									 <li><a href="#" style='color:black'>烤箱可以做什么好吃简单便宜的美食？</a></li>				
+    									</ul></div>
+    		</div>
+    		<div class="two">
+    			<div class="one_top"><b>明星.时尚</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/wenda2.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>2018年[双十一]有那些东西值得买？</b></h5></a><br>
+    			老板，再来一打！</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>2018年女生秋冬穿搭有什么新灵感？</a></li>
+    									 <li><a href="#" style='color:black'>喜欢的明星人设崩塌是怎样的体验？</a></li>
+    									 <li><a href="#" style='color:black'>杨超越圈粉能力有多强？</a></li>
+    									 <li><a href="#" style='color:black'>娱乐圈到底有多乱？</a></li>
+    									 <li><a href="#" style='color:black'>有那些平价不俗气的适合女学生的一副品牌</a></li>
+    									 <li><a href="#" style='color:black'>羽绒服应该怎样穿搭才有时尚感？</a></li>				
+    									</ul></div>
+    		</div>
+    		<div class="three">
+    			<div class="one_top"><b>音乐</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/wenda3.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>如何评价池子叫吴亦凡粉丝别刷榜了？</b></h5></a><br>
+    			笑shr人！</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>有那些景点的动漫配乐？</a></li>
+    									 <li><a href="#" style='color:black'>有没有让你听完感觉很心疼歌手的歌曲？</a></li>
+    									 <li><a href="#" style='color:black'>你收藏了哪些觉得很赞的MV？</a></li>
+    									 <li><a href="#" style='color:black'>如何评价沙漠骆驼这首歌？</a></li>
+    									 <li><a href="#" style='color:black'>陈奕迅有没有一句歌词让你水煎热泪盈眶？</a></li>
+    									 <li><a href="#" style='color:black'>你什么是时候会对华语乐坛感到失望？</a></li>				
+    									</ul></div>
+    		</div>
+    		<div class="four">
+    			<div class="one_top"><b>书籍</b></div>
+    			<div class="one_center">
+    			<div class="one_center_left"><img th:src="@{../images/major/wenda4.jpg}" width="125px" height="90px" alt="" class="img-thumbnail"></div>
+    			<div class="one_center_right"><a href="#"><h5><b>有哪些书有利于年轻人未来发展？</b></h5></a><br>
+    			好有道理，我竟无言以对！</div>
+    			</div>
+    			<div class="one_down"><ul><li><a href="#" style='color:black'>你会推荐哪一本心理学书籍？</a></li>
+    									 <li><a href="#" style='color:black'>你有看过哪些暗黑童话？</a></li>
+    									 <li><a href="#" style='color:black'>大家对香港作家倪匡的印象是什么？</a></li>
+    									 <li><a href="#" style='color:black'>为什么越是奉为经典的书籍读的人越少？</a></li>
+    									 <li><a href="#" style='color:black'>如果能穿越进一本书里，你会选择哪本？</a></li>
+    									 <li><a href="#" style='color:black'>要提高批判性思维的能力，需要看那些书？</a></li>				
+    									</ul></div>
+    		</div>
+    		</div>
+    	</div>
+    	<div class="right"><h3><center>排行榜</center></h3></div>
+    </div>
+    <div class="down"></div>
+
+  </div>
+  </body>
+<script>
+	var topart = $("#toparticle");
+	$.ajax({
+		type:'GET',
+		url:"/article/all",
+		success:function(data){
+			$.each(data.data,function(index,art){
+				topart.append("<a href='/article/"+art.id+"' style='color:black'><li><h4>"+art.title+"<h5>热度:"+art.hot);
+			});
+		}
+	});
+</script>
+</html>
