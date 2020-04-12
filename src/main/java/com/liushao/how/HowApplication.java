@@ -1,12 +1,12 @@
-package com.liushao.guangli;
+package com.liushao.how;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GuangliApplication {
+public class HowApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GuangliApplication.class, args);
+        SpringApplication.run(HowApplication.class, args);
     }
 }

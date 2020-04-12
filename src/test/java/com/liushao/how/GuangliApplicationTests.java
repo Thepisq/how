@@ -1,4 +1,4 @@
-package com.liushao.guangli;
+package com.liushao.how;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
