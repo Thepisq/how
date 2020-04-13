@@ -1,5 +1,6 @@
 package com.liushao.how.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -10,21 +11,31 @@ import lombok.Data;
 
 @Entity
 @Data
-public class User {
+public class User implements Serializable{
+
+    private static final long serialVersionUID = -5672299093275279481L;
+
     @Id
-    private long userId;
+    @Column(length = 50)
+    private String id;
 
     @Column(length = 20)
-    private String userIp;
+    private String ip;
 
     @Column(length = 30)
     private String username;
 
     @Column(length = 20)
-    private String passworld;
+    private String password;
+
+    /**
+     * M:F
+     */
+    @Column(length = 5)
+    private String sex;//性别
 
     @Column(length = 30)
-    private String userEmail;
+    private String email;
 
     private String avatar;
 

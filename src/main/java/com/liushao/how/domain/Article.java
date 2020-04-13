@@ -1,5 +1,6 @@
 package com.liushao.how.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Basic;
@@ -13,14 +14,19 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Article {
+public class Article implements Serializable {
+    
+    private static final long serialVersionUID = -7102972758096410686L;
+
     @Id
-    private long articleId;
+    @Column(length = 50)
+    private String id;
 
     /**
      * 作者id
      */
-    private long userId;
+    @Column(length = 50)
+    private String userId;
 
     @Column(length = 30)
     private String articleTital;
