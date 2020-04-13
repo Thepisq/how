@@ -9,6 +9,9 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
+/**
+ * 用户，暂时为管理员
+ */
 @Entity
 @Data
 public class User implements Serializable{

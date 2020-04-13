@@ -6,6 +6,7 @@ import com.liushao.how.util.JwtUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class HowApplication {
@@ -22,5 +23,14 @@ public class HowApplication {
     @Bean
     public JwtUtil jwtUtil(){
         return new JwtUtil();
+    }
+
+    /**
+     * 使用时需要启动时注入
+     * @return BCryptPasswordEncoder
+     */
+    @Bean
+	public BCryptPasswordEncoder encoder() {
+	    return new BCryptPasswordEncoder();
     }
 }

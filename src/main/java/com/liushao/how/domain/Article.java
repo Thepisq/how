@@ -12,6 +12,9 @@ import javax.persistence.Lob;
 
 import lombok.Data;
 
+/**
+ * 文章
+ */
 @Entity
 @Data
 public class Article implements Serializable {
@@ -35,19 +38,22 @@ public class Article implements Serializable {
     @Basic(fetch = FetchType.LAZY)
     private String articleContent;
 
-    @Column(length = 20)
+    /**
+     * 浏览量
+     */
     private int views;
 
-    @Column(length = 20)
+    /**
+     * 评论数
+     */
     private int commentCount;
 
     /**
      * 点赞数
      */
-    @Column(length = 20)
     private int likeCount;
 
-    private Date createtime;
+    private Date createDate;
 
-    private Date updateTime;
+    private Date updateDate;
 }

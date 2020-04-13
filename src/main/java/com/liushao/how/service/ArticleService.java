@@ -32,14 +32,14 @@ public class ArticleService {
         return articleRepository.findById(id).get();
     }
 
-    public Article add(Article article){
+    public void add(Article article){
         article.setId(idWorker.nextId()+"");
-        return articleRepository.save(article);
+        articleRepository.save(article);
     }
 
-    public Article update(String id, Article article){
+    public void update(String id, Article article){
         article.setId(id);
-        return articleRepository.save(article);
+        articleRepository.save(article);
     }
 
     public void deleteById(String id){
