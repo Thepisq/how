@@ -53,6 +53,14 @@ public class Article implements Serializable {
      */
     private int likeCount;
 
+    /**
+     * 激活状态
+     * 0
+     * 1
+     */
+    @Column(length = 2)
+    private int active;
+
     private Date createDate;
 
     private Date updateDate;

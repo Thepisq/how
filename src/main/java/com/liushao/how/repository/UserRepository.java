@@ -14,5 +14,5 @@ public interface UserRepository extends JpaRepository<User, String>,JpaSpecifica
      * @param mobilePhone
      * @return User
      */
-    public User findByMobilePhone(String mobilePhone);
+    User findByMobilePhone(String mobilePhone);
 }

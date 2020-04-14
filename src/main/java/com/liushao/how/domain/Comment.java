@@ -38,4 +38,12 @@ public class Comment implements Serializable{
     private Date commentDate;
 
     private String commentContent;
+
+    /**
+     * 激活状态
+     * 0
+     * 1
+     */
+    @Column(length = 2)
+    private int active;
 }

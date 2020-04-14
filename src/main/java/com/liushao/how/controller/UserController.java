@@ -19,7 +19,6 @@ import com.liushao.how.util.JwtUtil;
  * @author Administrator
  */
 @RestController
-@CrossOrigin
 @RequestMapping("/user")
 public class UserController {
 

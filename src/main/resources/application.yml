@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: how
+
   datasource:
     # 使用阿里的Druid连接池
     type: com.alibaba.druid.pool.DruidDataSource

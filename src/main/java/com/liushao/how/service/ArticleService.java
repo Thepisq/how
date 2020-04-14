@@ -34,6 +34,7 @@ public class ArticleService {
 
     public void add(Article article){
         article.setId(idWorker.nextId()+"");
+        article.setActive(1);
         articleRepository.save(article);
     }
 
@@ -43,7 +44,9 @@ public class ArticleService {
     }
 
     public void deleteById(String id){
-        articleRepository.deleteById(id);;
+        Article article = articleRepository.findById(id).get();
+        article.setActive(0);
+        articleRepository.save(article);
     }
 
     /**
@@ -55,9 +58,10 @@ public class ArticleService {
         for(String id : ids){
             Article article =new Article();
             article.setId(id);
+            article.setActive(0);
             list.add(article);
         }
-        articleRepository.deleteInBatch(list);
+        articleRepository.saveAll(list);
     }
 
     /**
@@ -97,7 +101,9 @@ public class ArticleService {
 
             @Override
 			public Predicate toPredicate(Root<Article> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-				List<Predicate> predicateList = new ArrayList<Predicate>();
+                List<Predicate> predicateList = new ArrayList<Predicate>();
+                //不管什么条件都只查询出active=1的文章
+                predicateList.add(cb.equal(root.get("active").as(Integer.class), 1));
                 // ID
                 if (!searchMap.get("id").toString().isEmpty()) {
                 	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
